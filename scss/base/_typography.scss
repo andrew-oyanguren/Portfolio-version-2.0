@@ -1,0 +1,35 @@
+// ===== Root (Media Queries) ===== \\
+
+/*@media (min-width: $breakpoint-small) {
+  body {
+    background-color: rgb(228, 228, 228);
+  }
+}
+
+@media (min-width: $breakpoint-medium) {
+  body {
+    background-color: rgb(180, 180, 180);
+  }
+}
+
+@media (min-width: $breakpoint-large) {
+  body {
+    background-color: rgb(131, 131, 131);
+  }
+}
+
+@media (min-width: $breakpoint-extra-large) {
+  body {
+    background-color: rgb(59, 59, 59);
+  }
+}*/ 
+
+p {
+  font-family: $ff-primary;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $ff-decorative;
+}

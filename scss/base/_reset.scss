@@ -1,0 +1,15 @@
+/* ===== Global Presets ===== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block; // fixes margin-bottom issue
+  max-width: 100%; // makes images responsive
+}
+

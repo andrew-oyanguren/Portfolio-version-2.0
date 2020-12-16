@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andrew Oyanguren | Portfolio</title>
+
+  <!-- Google Font CDN -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Raleway:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <!-- Logo -->
+      <p class="logo"><span>Andrew A.</span>Oyanguren</p>
+
+      <!-- Burger -->
+      <div class="burger">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </div>
+
+      <!-- Navbar -->
+      <nav class="navbar">
+        <!-- Navbar Nav -->
+        <ul class="navbar-nav">
+          <!-- Show Class applied -->
+          <li class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#skills" class="nav-link">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a href="#projects" class="nav-link">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Social Links -->
+      <div class="social-link-flex">
+        <a href="https://github.com/andrew-oyanguren" class="social-link" target="_blank"><i
+            class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/andrew-oyanguren/" class="social-link" target="_blank"><i
+            class="fab fa-linkedin-in"></i></a>
+        <a href="https://twitter.com/aaoyanguren" class="social-link" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="container">
+        <!-- Header -->
+        <div class="hero-header">
+          <p>Hello, my name is</p>
+          <h1 class="hero-title">Andrew Oyanguren</h1>
+        </div>
+        <!-- Content -->
+        <div class="hero-content">
+          <button class="hero-btn" type="button"></button>
+          <span class="circle-sm" id="hero-circle"></span>
+          <span class="circle-md" id="hero-circle"></span>
+          <span class="circle-lg" id="hero-circle"></span>
+          <span class="circle-lg" id="hero-circle"></span>
+          <span class="circle-lg" id="hero-circle"></span>
+          <span class="circle-md" id="hero-circle"></span>
+          <span class="circle-sm" id="hero-circle"></span>
+        </div>
+        <!-- Lead Text -->
+        <p class="lead">Your friendly neighborhood Web-Developer</p>
+      </div>
+    </div> <!-- End Hero -->
+
+    <section class="about" id="about">
+      <div class="container">
+        <!-- Carousel -->
+        <div class="carousel">
+          <!-- Previous Button -->
+          <button class="carousel-btn prev-btn btn-hidden">
+            <i class="fas fa-angle-left"></i>
+          </button>
+          <!-- Container "Change image alts" -->
+          <div class="carousel-track-container">
+            <ul class="carousel-track">
+              <li class="carousel-slide current-slide">
+                <img src="./img/carousel/me-n-julian.jpg" alt="1">
+              </li>
+              <li class="carousel-slide">
+                <img src="./img/carousel/saw-beach.jpg" alt="2">
+              </li>
+              <li class="carousel-slide">
+                <img src="./img/carousel/me-n-julian.jpg" alt="3">
+              </li>
+            </ul>
+          </div>
+          <!-- Next Button -->
+          <button class="carousel-btn next-btn">
+            <i class="fas fa-angle-right"></i>
+          </button>
+          <!-- Carousel Indicators -->
+          <div class="carousel-nav">
+            <button class="carousel-indicator current-slide"></button>
+            <button class="carousel-indicator"></button>
+            <button class="carousel-indicator"></button>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+          <h2 class="section-title">Andrew Oyan-What?</h2>
+          <p id="about-text">Last name? It's Basque. I'm a Front-End Web Developer from Southern California with a
+            passion for creating
+            cool stuff on the internet.</p>
+        </div>
+      </div>
+    </section><!-- End About -->
+
+    <section class="skills" id="skills">
+      <div class="container">
+        <!-- Title -->
+        <div class="title-wrapper">
+          <h2 class="section-title">Tools and Technologies</h2>
+        </div>
+        <!-- Panels -->
+        <div class="panel-container">
+          <div class="panel active">
+            <h3>HTML</h3>
+            <div class="content">
+              <p>
+                I take my markup seriously. I am continuously learning and growing in all aspects of my coding
+                development, and that includes HTML. Some examples of this would be using better naming conventions for
+                the project, giving clear and consise attribute names, and leaving discriptive and helpful comments.
+              </p>
+            </div>
+          </div>
+          <div class="panel">
+            <h3>CSS</h3>
+            <div class="content">
+              <p>
+                Oh CSS is fun! When you add the right shadow that makes an element pop, or the perfect animation that
+                grabs the users attention, it feels so good. I like to use SCSS as it allows me to better organize my
+                CSS, as well the perks of implementing the use of functions and mixins. Spiderman shoots webs and can
+                scale tall buildings; I use SCSS.
+              </p>
+            </div>
+          </div>
+          <div class="panel">
+            <h3>JavaScript</h3>
+            <div class="content">
+              <p>
+                The file where the magic happens. I invest a lot of time exploring the vast ocean that is Javascript,
+                and I can't get enough. I am the type of explorer that needs to look under every rock and check all
+                edges of the map. JS leaves me with two feelings: "I am the god of my own universe" and "We're going to
+                need a bigger boat."
+              </p>
+            </div>
+          </div>
+          <div class="panel">
+            <h3>Figma</h3>
+            <div class="content">
+              <p>
+                The most important area of my projects is the amount of time I spend being creative in the
+                wireframing process. With each project I design, the better I become at mixing both innovation,
+                and beauty, as well as providing an excellent user experience with an engaging story.
+                I use Figma to convert my wireframes into polished UI/UX designs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> <!-- End Skills -->
+
+    <section class="projects" id="projects">
+      <div class="container">
+        <!-- Title -->
+        <div class="title-wrapper">
+          <h2 class="section-title">Most Recent Projects</h2>
+        </div>
+        <!-- Grid Container -->
+        <div class="grid-container">
+          <div class="project">
+            <a href="https://github.com/andrew-oyanguren/explore-portland" target="_blank">
+              <div class="content">
+                <h4>Explore Portland</h4>
+                <p>HTML <span></span> SCSS <span></span> Bootstrap </p>
+              </div>
+            </a>
+          </div>
+          <div class="project">
+            <div class="card-back card-face"></div>
+            <a href="https://github.com/andrew-oyanguren/memory-game" target="_blank">
+              <div class="card-front card-face">
+                <h4>Memory Game</h4>
+                <p>HTML <span></span> SCSS <span></span> JavaScript </p>
+              </div>
+            </a>
+          </div>
+          <div class="project">
+            <a href="https://github.com/andrew-oyanguren/qwik-list" target="_blank">
+              <div class="content">
+                <h4>Qwik List</h4>
+                <p>HTML <span></span> CSS <span></span> Javascript </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section> <!-- End Projects -->
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <!-- Form -->
+        <div class="form-container">
+          <h3>Give Me a Shout</h3>
+          <form action="#">
+            <label for="name"></label>
+            <input type="text" id="name" name="name" placeholder="Name">
+            <label for="email"></label>
+            <input type="text" id="email" name="email" placeholder="Email">
+            <label for="message"></label>
+            <textarea name="message" id="message" cols="30" rows="4" placeholder="Message"></textarea>
+            <input id="submit-btn" type="submit" value="Send">
+          </form>
+        </div>
+        <div class="quote">
+          <p>Greatness is a lot of small things done well.</p>
+          <small>- Eric Thomas</small>
+        </div>
+      </div>
+      <!-- Circles -->
+      <div class="content-container">
+        <div class="vertical-circles">
+          <span class="circle-sm"></span>
+          <span class="circle-md"></span>
+          <span class="circle-lg"></span>
+          <button class="hero-btn" id="contact-btn" type="button"></button>
+        </div>
+        <div class="horizontal-circles">
+          <span class="circle-sm"></span>
+          <span class="circle-md"></span>
+          <span class="circle-lg"></span>
+        </div>
+      </div>
+    </section> <!-- End Contact -->
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="./js/app.js"></script>
+</body>
+
+</html>

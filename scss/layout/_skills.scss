@@ -1,0 +1,384 @@
+/* SKills */ 
+
+.skills {
+  background: linear-gradient(to right, rgba(160, 171, 173, 0.5), rgba(160, 171, 173, 0.384));
+  padding: 3rem 0;
+  
+  .container {
+    //background-color: rgba(153, 205, 50, 0.5);
+
+    .title-wrapper {
+      //background-color: rgb(165, 146, 121);
+      text-align: center;
+      max-width: 60rem;
+      margin: 0 auto;
+      
+      .section-title {
+        color: $text-color-dark;
+        font-size: 1.75rem;
+        text-transform: uppercase;
+        padding: 3rem 0;
+      }
+    }
+
+    .panel-container {
+      //background-color: rgb(75, 75, 68);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      height: 38rem;
+      margin-top: 1rem;
+      padding: 0.5rem 0;
+
+      .panel {
+        //background-color: antiquewhite;
+        width: 95%;
+        max-width: 30rem;
+        margin: 0.5rem auto;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+        border-radius: 50px;
+        flex: 0.07;
+        cursor: pointer;
+        position: relative;
+        transition: all 300ms ease-in;
+        overflow: hidden;
+
+        border: solid 3px white;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.219);
+
+        &:first-child {
+          background-color: rgb(243, 243, 243);
+        }
+
+        &:nth-child(2) {
+          background-color: rgb(243, 243, 243);
+        }
+
+        &:nth-child(3) {
+          background-color: rgb(243, 243, 243);
+        }
+
+        &:last-child {
+          background-color: rgb(243, 243, 243);
+        }
+
+        &:hover {
+          background-color: rgb(252, 252, 252);
+        }
+
+        h3 {
+          //background-color: blanchedalmond;
+          color: $text-color-dark;
+          font-size: 1.65rem;
+          font-family: $ff-primary;
+          padding-top: 1rem;
+          pointer-events: none;
+          opacity: 0;
+          position: relative;
+
+          &::before,
+          &::after {
+            display: block;
+            position: absolute;
+            content: "";
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+          }
+
+          &::before {
+            left: 20%;
+            top: 50%;
+          }
+
+          &::after {
+            right: 20%;
+            top: 50%;
+          }
+        }
+
+        .content {
+          //background-color: pink;
+          text-align: left;
+          position: absolute;
+          width: 95%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          overflow: hidden;
+
+          p {
+            color: $text-color-medium;
+            font-size: 1.1rem;
+            line-height: 1.45;
+            opacity: 0;
+            padding-top: 0.5rem;
+
+            transition: opacity 100ms ease-in 200ms;
+          }
+        }
+      }
+
+      .panel.active {
+        flex: 2;
+        border-radius: 1.5rem;
+        border: solid 3px $clr-primary;
+
+        h3 {
+          padding-top: 1rem;
+          opacity: 1;
+          position: relative;
+
+          transition: opacity 100ms ease-in 200ms;
+
+          &::before,
+          &::after {
+            box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.452);
+          }
+
+          &::before {
+            animation: left-dot 250ms ease-in 280ms;
+          }
+
+          &::after {
+            animation: right-dot 250ms ease-in 280ms;
+          }
+        }
+
+        &:first-child {
+          border-color: rgba(255, 38, 0, 0.75);
+
+          h3 {
+            &::before,
+            &::after {
+              background-color: rgb(255, 38, 0);
+            }
+          }
+        }
+
+        &:nth-child(2) {
+          border-color: rgba(94, 92, 216, 0.75);
+
+          h3 {
+            &::before,
+            &::after {
+              background-color: rgb(94, 92, 216);
+            }
+          }
+        }
+
+        &:nth-child(3) {
+          border-color: rgba(255, 255, 0, 0.75);
+
+          h3 {
+            &::before,
+            &::after {
+              background-color:rgb(255, 255, 0);
+            }
+
+            &::before {
+              left: 15%;
+            }
+
+            &::after {
+              right: 15%;
+            }
+          }
+        }
+
+        &:last-child {
+          border-color: rgba(128, 0, 128, 0.75);
+
+          h3 {
+            &::before,
+            &::after {
+              background-color:rgb(128, 0, 128);
+            }
+          }
+
+          p {
+            padding-top: 1rem;
+          }
+        }
+
+        .content {
+
+          p {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Media Queries: Skills */ 
+
+@media (min-width: $breakpoint-small) {
+  .skills {
+    padding: 5rem 0;
+
+    .container {
+      //background-color: antiquewhite;
+
+      .title-wrapper {
+        //background-color: rgba(0, 0, 0, 0.411);
+
+        .section-title {
+          font-size: 2rem;
+        }
+      }
+
+      .panel-container {
+        
+        .panel { 
+          padding-bottom: 2.15rem;
+          max-width: 40rem;
+
+          h3 {
+            font-size: 1.95rem;   
+            
+            &::before {
+              left: 25%;
+            }
+
+            &::after {
+              right: 25%;
+            }
+          }
+
+          .content {
+            //background-color: yellow;
+            width: 85%;
+          }
+        }
+
+        .panel.active {
+
+          &:nth-child(3) {
+      
+            h3 {
+  
+              &::before {
+                left: 20%;
+              }
+  
+              &::after {
+                right: 20%;
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
+
+@media (min-width: $breakpoint-medium) {
+  .skills {
+    //background-color: bisque;
+    padding: 8rem 0;
+
+    .container {
+      //background-color: rgba(119, 255, 248, 0.575);
+
+      .title-wrapper {
+        //background-color: linen;
+
+        .section-title {
+          font-size: 2.25rem;
+        }
+      }
+
+      .panel-container {
+       // background-color: rgba(153, 205, 50, 0.671);
+        max-width: 50rem;
+        margin: 0 auto;
+        flex-direction: row;
+        height: 30rem;
+        margin-top: 1rem;
+
+        .panel {
+          margin: 0 0.5rem;
+          flex: 0.25;
+
+          h3 {
+            font-size: 2rem;
+            opacity: 0;
+            margin-top: 3rem;
+            transition: opacity 300ms ease-in;
+          }
+
+          .content {
+            //background-color: pink;
+            height: max-content;
+            overflow: hidden;
+
+            p {
+              color: rgb(243, 243, 243); // add colors to al panels
+              font-size: 1.25rem;
+              transition: opacity 30ms linear 275ms;
+            }
+            
+          }
+        }
+        
+        .panel.active {
+
+          h3 {
+            opacity: 1;
+            margin-top: 3rem;
+          }
+
+          .content {
+
+            p {
+              color: black;
+            }
+          }
+        
+        }
+      }
+
+    }
+  }
+}
+
+@media (min-width: $breakpoint-large) {
+  .skills {
+    padding-bottom: 10rem;
+    
+    .container {
+
+      .title-wrapper {
+        //background-color: linen;
+
+        .section-title {
+          font-size: 3.45rem;
+          padding: 4rem 0;
+        }
+      }
+
+      .panel-container {
+        //background-color: rgb(121, 101, 101);
+        width: 90%;
+        max-width: 60rem;
+
+        .panel {
+
+          h3 {
+            font-size: 2.25rem;
+          }
+
+          p {
+            line-height: 1.5rem;
+          }
+        }
+      }
+    } 
+  }
+}

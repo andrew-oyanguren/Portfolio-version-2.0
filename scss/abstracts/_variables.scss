@@ -1,0 +1,43 @@
+// ===== Font Properties ===== \\
+
+// font weights:
+$fw-light: 300;
+$fw-regular: 400;
+$fw-semi-bold: 500;
+$fw-bold: 700;
+
+// font-family:
+$ff-primary: 'Raleway', sans-serif;
+$ff-decorative: 'Libre Baskerville', serif;
+
+
+// ===== Media Queries ===== \\
+
+// breakpoints:
+$breakpoint-small: 568px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+$breakpoint-extra-large: 1200px;
+
+
+// ===== Colors ===== \\
+
+// Text-color:
+$text-color-light: rgb(250, 250, 250);
+$text-color-medium: rgb(100, 100, 100);
+$text-color-dark:rgb(45, 45, 45);
+
+// Style-color:
+$clr-primary: rgb(247, 143, 45);
+$clr-accent: linear-gradient(to right,  rgb(247, 143, 45),  rgb(211, 122, 38));
+
+
+// ===== Transitions ===== \\
+
+// Hamburger:
+$burger-hover: all 350ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+$burger-center-line: transform 400ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+// Navbar:
+$navbar-show: opacity 675ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+$navbar-link-hover: all 100ms ease-in;
