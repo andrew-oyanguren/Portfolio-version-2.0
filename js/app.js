@@ -1,14 +1,14 @@
 // ===== Selectors and Variables ===== \\
 
-// burger:
+// ===== burger:
 const hamburger = document.querySelector('.burger');
 const navbarNav = document.querySelector('.navbar-nav');
 
-//hero: 
+// ===== hero: 
 const heroBtn = document.querySelector('.hero-btn');
 const heroCircles = document.querySelectorAll('#hero-circle');
 
-// about:
+// ===== about:
 const track = document.querySelector('.carousel-track');
 const slides = Array.from(track.children);
 const nextBtn = document.querySelector('.next-btn');
@@ -51,7 +51,7 @@ const hideShowSlideArrows = (slides, prevBtn, nextBtn, targetIndex) => {
   }
 }
 
-// Working on both next and prev buttons, figure out why.
+// Working on both next and prev buttons, figure out why it's working on prev.
 const aboutTextChange = (nextIndex) => {
   if (nextIndex === 1) {
     aboutText.innerText = "I left my previous profession, after ten years, to persue my dream of becoming a Web Developer. When you love what you do, you offer the best version of yourself.";
@@ -63,26 +63,28 @@ const aboutTextChange = (nextIndex) => {
 }
 
 
-// Skills: 
+// ===== Skills: 
 const panels = document.querySelectorAll('.panel');
 
-// contact:
+// ===== contact:
 const contactBtn = document.getElementById('contact-btn');
+const submitBtn = document.getElementById('submit-btn');
 
 
 // ===== Event Listeners ===== \\
 
-// burger:
+// ===== burger:
 hamburger.addEventListener('click', showNav);
 
-// hero:
+// ===== hero:
 heroBtn.addEventListener('click', fireAnimation);
 heroBtn.addEventListener('mouseenter', flicker);
 
-// about:
+// ===== about:
 nextBtn.addEventListener('click', slideLeft);
 prevBtn.addEventListener('click', slideRight);
 
+// Need to add text change to dots
 carouselNav.addEventListener('click', e => {
   const targetDot = e.target.closest('button');
 
@@ -99,7 +101,7 @@ carouselNav.addEventListener('click', e => {
 
 })
 
-// skills:
+// ===== skills:
 panels.forEach(panel => {
   panel.addEventListener('click', () => {
     removeActiveClasses();
@@ -107,12 +109,13 @@ panels.forEach(panel => {
   })
 })
 
-// contact:
+// ===== contact:
 contactBtn.addEventListener('click', scrollToTop, false);
+submitBtn.addEventListener('click', fireAlert);
 
 // ===== functions ===== \\
 
-// burger:
+// ===== burger:
 function showNav() {
   if (navbarNav.classList[1] === 'show') {
     navbarNav.classList.remove('show');
@@ -123,7 +126,7 @@ function showNav() {
   }
 }
 
-// hero:
+// ===== hero:
 function fireAnimation() {
   heroCircles.forEach((circle) => {
     if (!circle.hasAttribute('animation')) {
@@ -136,16 +139,18 @@ function fireAnimation() {
 }
 
 function flicker() {
-  heroCircles.forEach((circle) => {
-    circle.style.animation = 'flicker 300ms ease-out';
-    circle.style.opacity = 1;
-    circle.addEventListener('animationend', () => {
-      circle.style.setProperty('animation', null);
+  setTimeout(() => {
+    heroCircles.forEach((circle) => {
+      circle.style.animation = 'flicker 300ms ease-out';
+      circle.style.opacity = 1;
+      circle.addEventListener('animationend', () => {
+        circle.style.setProperty('animation', null);
+      })
     })
-  })
+  }, 590);
 }
 
-// about:
+// ===== about:
 function slideLeft() {
   const currentSlide = track.querySelector('.current-slide');
   const nextSlide = currentSlide.nextElementSibling;
@@ -172,14 +177,18 @@ function slideRight() {
   hideShowSlideArrows(slides, prevBtn, nextBtn, prevIndex);
 }
 
-// skills:
+// ===== skills:
 function removeActiveClasses() {
   panels.forEach(panel => {
     panel.classList.remove('active');
   })
 }
 
-// contact:
+// ===== contact:
 function scrollToTop() {
   document.body.scrollIntoView({ behavior: 'smooth' });
+}
+
+function fireAlert() {
+  alert('Hey, sorry your message was not sent. I am currently learning PHP as you are reading this message, and I will be adding functionailty to the contact form ASAP. Thank you for your patience!');
 }

@@ -1,7 +1,7 @@
 /* SKills */ 
 
 .skills {
-  background: linear-gradient(to right, rgba(160, 171, 173, 0.5), rgba(160, 171, 173, 0.384));
+  background: linear-gradient(to right, rgba(160, 171, 173, 0.5), rgba(160, 171, 173, 0.385));
   padding: 3rem 0;
   
   .container {
@@ -28,12 +28,12 @@
       flex-direction: column;
       justify-content: center;
       align-content: center;
-      height: 38rem;
+      height: 40rem;
       margin-top: 1rem;
       padding: 0.5rem 0;
 
       .panel {
-        //background-color: antiquewhite;
+        background-color: rgb(243, 243, 243);
         width: 95%;
         max-width: 30rem;
         margin: 0.5rem auto;
@@ -49,22 +49,6 @@
         border: solid 3px white;
         box-shadow: 2px 0 10px rgba(0, 0, 0, 0.219);
 
-        &:first-child {
-          background-color: rgb(243, 243, 243);
-        }
-
-        &:nth-child(2) {
-          background-color: rgb(243, 243, 243);
-        }
-
-        &:nth-child(3) {
-          background-color: rgb(243, 243, 243);
-        }
-
-        &:last-child {
-          background-color: rgb(243, 243, 243);
-        }
-
         &:hover {
           background-color: rgb(252, 252, 252);
         }
@@ -74,7 +58,7 @@
           color: $text-color-dark;
           font-size: 1.65rem;
           font-family: $ff-primary;
-          padding-top: 1rem;
+          margin-top: 0.45rem;
           pointer-events: none;
           opacity: 0;
           position: relative;
@@ -87,6 +71,7 @@
             width: 1rem;
             height: 1rem;
             border-radius: 50%;
+            transform: translateY(-50%);
           }
 
           &::before {
@@ -97,6 +82,13 @@
           &::after {
             right: 20%;
             top: 50%;
+          }
+        }
+
+        &:nth-of-type(even) {
+          //background-color: yellow;
+          .content {
+            margin-top: 0.45rem;
           }
         }
 
@@ -128,7 +120,7 @@
         border: solid 3px $clr-primary;
 
         h3 {
-          padding-top: 1rem;
+          margin-top: 0.45rem;
           opacity: 1;
           position: relative;
 
@@ -274,6 +266,41 @@
         }
       }
 
+    }
+  }
+}
+
+@media (min-width: 375px) {
+  .skills {
+
+    .container {
+
+      .panel-container {
+
+        .panel {
+
+          h3 {
+            //background-color: red;
+            margin-top: 5rem;
+          }
+
+          &:nth-of-type(even) {
+            //background-color: yellow;
+
+            .content {
+              margin-top: 0;
+            }
+          }
+        }
+
+        .panel.active {
+
+          h3 {
+            //background-color: red;
+            margin-top: 1.15rem;
+          }
+        }
+      }
     }
   }
 }

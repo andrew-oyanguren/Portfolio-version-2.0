@@ -1,3 +1,39 @@
+@-webkit-keyframes grow {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes grow {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 @-webkit-keyframes pulse {
   0% {
     -webkit-transform: scale(1);
@@ -477,18 +513,30 @@ header .container .social-link-flex .social-link:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-  }
-  header .container .social-link-flex .social-link {
-    padding: 0.5rem;
+    -webkit-transform: translateX(-85%);
+            transform: translateX(-85%);
     -webkit-transition: -webkit-transform 250ms ease;
     transition: -webkit-transform 250ms ease;
     transition: transform 250ms ease;
     transition: transform 250ms ease, -webkit-transform 250ms ease;
   }
+  header .container .social-link-flex .social-link {
+    padding: 0.5rem;
+    -webkit-transition: -webkit-transform 200ms ease-in;
+    transition: -webkit-transform 200ms ease-in;
+    transition: transform 200ms ease-in;
+    transition: transform 200ms ease-in, -webkit-transform 200ms ease-in;
+  }
   header .container .social-link-flex:hover {
     background-color: #f0f0f0;
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+    -webkit-transform: translateX(-55%);
+            transform: translateX(-55%);
+    -webkit-transition: -webkit-transform 250ms ease-out;
+    transition: -webkit-transform 250ms ease-out;
+    transition: transform 250ms ease-out;
+    transition: transform 250ms ease-out, -webkit-transform 250ms ease-out;
   }
   header .container .social-link-flex:hover .social-link {
     -webkit-transform: translateX(3.25rem);
@@ -559,7 +607,7 @@ header .container .social-link-flex .social-link:hover {
 }
 
 .hero {
-  background: radial-gradient(rgba(160, 171, 173, 0.5), rgba(160, 171, 173, 0.384));
+  background: radial-gradient(rgba(160, 171, 173, 0.5), rgba(160, 171, 173, 0.385));
   width: 100%;
   height: 100vh;
   position: relative;
@@ -588,11 +636,12 @@ header .container .social-link-flex .social-link:hover {
   color: #646464;
   font-size: 1.15rem;
   text-align: left;
+  padding-bottom: 0.35rem;
 }
 
 .hero .container .hero-header h1 {
   color: #2d2d2d;
-  font-size: 2.33rem;
+  font-size: 1.85rem;
 }
 
 .hero .container .hero-content {
@@ -624,6 +673,8 @@ header .container .social-link-flex .social-link:hover {
           box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.116);
   position: absolute;
   top: 10%;
+  -webkit-animation: grow 1000ms 5 1500ms;
+          animation: grow 1000ms 5 1500ms;
 }
 
 .hero .container .hero-content .hero-btn:hover {
@@ -689,7 +740,7 @@ header .container .social-link-flex .social-link:hover {
 
 .hero .container .lead {
   color: #2d2d2d;
-  font-size: 1.10rem;
+  font-size: 1rem;
   font-weight: 500;
   text-align: center;
   padding: 1rem 0;
@@ -730,8 +781,13 @@ header .container .social-link-flex .social-link:hover {
     height: 2.65rem;
   }
   .hero .container .lead {
-    font-size: 1.30rem;
     padding: 1.25rem 0;
+  }
+}
+
+@media (min-width: 375px) {
+  .hero .container .hero-header h1 {
+    font-size: 2.15rem;
   }
 }
 
@@ -745,6 +801,7 @@ header .container .social-link-flex .social-link:hover {
   }
   .hero .container .hero-header p {
     font-size: 1.45rem;
+    padding-bottom: 1.5rem;
   }
   .hero .container .hero-header h1 {
     font-size: 4.25rem;
@@ -802,7 +859,6 @@ header .container .social-link-flex .social-link:hover {
 }
 
 .about .container .carousel-btn {
-  display: none;
   background: transparent;
   color: white;
   font-size: 2.5rem;
@@ -851,6 +907,8 @@ header .container .social-link-flex .social-link:hover {
 }
 
 .about .container .carousel-track-container .carousel-track .carousel-slide {
+  -o-object-fit: contain;
+     object-fit: contain;
   list-style-type: none;
   position: absolute;
   top: 0;
@@ -1018,8 +1076,8 @@ header .container .social-link-flex .social-link:hover {
 
 /* SKills */
 .skills {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(160, 171, 173, 0.5)), to(rgba(160, 171, 173, 0.384)));
-  background: linear-gradient(to right, rgba(160, 171, 173, 0.5), rgba(160, 171, 173, 0.384));
+  background: -webkit-gradient(linear, left top, right top, from(rgba(160, 171, 173, 0.5)), to(rgba(160, 171, 173, 0.385)));
+  background: linear-gradient(to right, rgba(160, 171, 173, 0.5), rgba(160, 171, 173, 0.385));
   padding: 3rem 0;
 }
 
@@ -1050,12 +1108,13 @@ header .container .social-link-flex .social-link:hover {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  height: 38rem;
+  height: 40rem;
   margin-top: 1rem;
   padding: 0.5rem 0;
 }
 
 .skills .container .panel-container .panel {
+  background-color: #f3f3f3;
   width: 95%;
   max-width: 30rem;
   margin: 0.5rem auto;
@@ -1075,22 +1134,6 @@ header .container .social-link-flex .social-link:hover {
           box-shadow: 2px 0 10px rgba(0, 0, 0, 0.219);
 }
 
-.skills .container .panel-container .panel:first-child {
-  background-color: #f3f3f3;
-}
-
-.skills .container .panel-container .panel:nth-child(2) {
-  background-color: #f3f3f3;
-}
-
-.skills .container .panel-container .panel:nth-child(3) {
-  background-color: #f3f3f3;
-}
-
-.skills .container .panel-container .panel:last-child {
-  background-color: #f3f3f3;
-}
-
 .skills .container .panel-container .panel:hover {
   background-color: #fcfcfc;
 }
@@ -1099,7 +1142,7 @@ header .container .social-link-flex .social-link:hover {
   color: #2d2d2d;
   font-size: 1.65rem;
   font-family: "Raleway", sans-serif;
-  padding-top: 1rem;
+  margin-top: 0.45rem;
   pointer-events: none;
   opacity: 0;
   position: relative;
@@ -1112,6 +1155,8 @@ header .container .social-link-flex .social-link:hover {
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .skills .container .panel-container .panel h3::before {
@@ -1122,6 +1167,10 @@ header .container .social-link-flex .social-link:hover {
 .skills .container .panel-container .panel h3::after {
   right: 20%;
   top: 50%;
+}
+
+.skills .container .panel-container .panel:nth-of-type(even) .content {
+  margin-top: 0.45rem;
 }
 
 .skills .container .panel-container .panel .content {
@@ -1154,7 +1203,7 @@ header .container .social-link-flex .social-link:hover {
 }
 
 .skills .container .panel-container .panel.active h3 {
-  padding-top: 1rem;
+  margin-top: 0.45rem;
   opacity: 1;
   position: relative;
   -webkit-transition: opacity 100ms ease-in 200ms;
@@ -1253,6 +1302,18 @@ header .container .social-link-flex .social-link:hover {
   }
   .skills .container .panel-container .panel.active:nth-child(3) h3::after {
     right: 20%;
+  }
+}
+
+@media (min-width: 375px) {
+  .skills .container .panel-container .panel h3 {
+    margin-top: 5rem;
+  }
+  .skills .container .panel-container .panel:nth-of-type(even) .content {
+    margin-top: 0;
+  }
+  .skills .container .panel-container .panel.active h3 {
+    margin-top: 1.15rem;
   }
 }
 
@@ -1583,8 +1644,8 @@ header .container .social-link-flex .social-link:hover {
 
 /* Contact */
 .contact {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.301)), to(rgba(0, 0, 0, 0.205)));
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.205));
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(160, 171, 173, 0.5)), to(rgba(160, 171, 173, 0.385)));
+  background: linear-gradient(to top, rgba(160, 171, 173, 0.5), rgba(160, 171, 173, 0.385));
   padding: 3rem 0;
   position: relative;
 }

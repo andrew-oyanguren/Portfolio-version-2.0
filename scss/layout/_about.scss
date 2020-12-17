@@ -16,7 +16,6 @@
       width: 100%;
 
       &-btn {
-        display: none; // add btns back after small breakpoint
         background: transparent;
         color: white;
         font-size: 2.5rem;
@@ -59,6 +58,7 @@
           transition: transform 300ms ease-in-out;
 
           .carousel-slide {
+            object-fit: contain;
             list-style-type: none;
             position: absolute;
             top: 0;
